@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-        Module 1-rectangle
+        Module 2-rectangle
         Defines a Rectangle class.
     """
 
@@ -35,7 +35,7 @@ class Rectangle:
                 raise ValueError("width must be >= 0")
             self._width = value
 
-        @propert
+        @property
         def height(self):
             """ Retrieves the height of a Rectangle instance. """
             return self._height
@@ -52,3 +52,21 @@ class Rectangle:
             if value < 0:
                 raise ValueError("height must be >= 0")
             self._height = value
+
+        def area(self):
+            """Calculates the area of a Rectangle instance
+            
+            Returns:
+                Area of the rectangle, given by height * width
+            """
+            return self._width * self._height
+        
+        def perimeter(self):
+            """Calculates the perimeter of a Rectangle instance
+            
+            Returns:
+                Perimeter of the rectangle, given by 2 * (height + width)
+            """
+            if self._height == 0 or self._width == 0:
+                return 0
+            return 2 * (self._height + self._height)
